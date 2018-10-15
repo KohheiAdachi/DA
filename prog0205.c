@@ -10,11 +10,29 @@ struct COMP {
 /* 構造体COMP型で表された複素数の値を表示する関数 */
 void print_comp(struct COMP c)
 {
-    printf("%.1f",c.re);
-    if(c.im>=0){
-    printf("+");
-  }
-    printf("%.1fi\n",c.im);
+
+    if(c.im>0.0 && c.re > 0.0){
+      printf("%.1f",c.re);
+      printf("+");
+      printf("%.1fi\n",c.im);
+    }
+    else if(c.im<0.0){
+      printf("%.1f",c.re);
+      // printf("+");
+      printf("%.1fi\n",c.im);
+    }
+    else if(c.im==0.0){
+      printf("%.1f\n",c.re);
+    }
+    else if(c.re==0.0){
+      printf("%.1fi\n",c.im);
+
+    }
+    else if(c.re==0.0 && c.im == 0.0){
+      printf("%.1f\n",0.0);
+    }
+
+
 }
 
 
