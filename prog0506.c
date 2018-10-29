@@ -15,12 +15,13 @@ void read_point(struct POINT2D_EX po[]) {
      FILE *fp;
   int i;
   if((fp=fopen("data2.txt","r"))==NULL){
-    printf("\n");
+    printf("ファイルが開けません\n");
     exit(1);
   }
 	for (i = 0; i < N; i++) {
     fscanf(fp,"%lf %lf",&po[i].x,&po[i].y);
   }
+  fclose(fp);
 }
 
 void calc_dist(struct POINT2D_EX pt, struct POINT2D_EX po[]) {
@@ -31,7 +32,7 @@ void calc_dist(struct POINT2D_EX pt, struct POINT2D_EX po[]) {
       d = sqrt((pt.x-po[i].x)*(pt.x-po[i].x)+(pt.y-po[i].y)*(pt.y-po[i].y));
       po[i].dist = d;
    }
-	
+
 }
 
 void sort_point(struct POINT2D_EX po[], int left, int right)  {

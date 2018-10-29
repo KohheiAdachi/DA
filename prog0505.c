@@ -14,13 +14,13 @@ void read_point(struct POINT2D_EX po[]) {
   FILE *fp;
   int i;
   if((fp=fopen("data2.txt","r"))==NULL){
-    printf("\n");
+    printf("ファイルが開けません\n");
     exit(1);
   }
 	for (i = 0; i < N; i++) {
     fscanf(fp,"%lf %lf",&po[i].x,&po[i].y);
   }
-
+  fclose(fp);
 }
 
 int main(void) {
