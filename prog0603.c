@@ -11,11 +11,10 @@ struct PRICE {
 int linear_search(int key, struct PRICE data[], int n)
 {
     int i;
-    data[n].code = key;
     for( i=0; data[i].code != key; i++){     
+        if (data[i].code == key)
+            return i;
     }
-    if( i != n )
-        return i;
     return -1;
 }
 
