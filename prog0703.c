@@ -46,7 +46,7 @@ int search_zip_hash(int key)
         h = 0;
     }
 }
-    return -1;
+    return hash_table[h];
 }
 
 void make_zip_hash_table()
