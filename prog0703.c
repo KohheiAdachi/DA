@@ -22,12 +22,31 @@ int hash(int key)
 
 void add_zip_hash(int key, int no)
 {
-   
+   int h = hash(key);
+   while(hash_table[h] != -1){
+       if(h < HASH_SIZE)
+            h++;
+       else
+            h = 0;
+   }
+    hash_table[h] = no;
+
 }
 
 int search_zip_hash(int key)
 {
-   
+ int h = hash(key);
+ while(hash_table[h] != -1){
+    if(zip_data[hash_table[h]].code == key){
+        return hash_table[h];
+    } 
+    else{
+     h++;
+    if (HASH_SIZE < h)
+        h = 0;
+    }
+}
+    return -1;
 }
 
 void make_zip_hash_table()

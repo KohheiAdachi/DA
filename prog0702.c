@@ -32,7 +32,6 @@ int search_zip_hash(int key)
 
     return hash_table[h];
 }
-
 void make_zip_hash_table()
 {
     int i;
