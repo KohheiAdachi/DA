@@ -28,7 +28,7 @@ void add_zip_hash(int key, int no)
 
 int search_zip_hash(int key)
 {
-     int h = hash(key);
+    int h = hash(key);
 
     return hash_table[h];
 }
