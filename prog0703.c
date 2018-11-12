@@ -22,32 +22,12 @@ int hash(int key)
 
 void add_zip_hash(int key, int no)
 {
-
-
-
-
-
-
-
-
-
-
+   
 }
 
 int search_zip_hash(int key)
 {
-
-
-
-
-
-
-
-
-
-
-
-
+   
 }
 
 void make_zip_hash_table()
