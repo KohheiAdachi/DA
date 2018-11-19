@@ -1,4 +1,4 @@
-#include <stab.h>
+#include <stdio.h>
 int main(void){
 	char *figure1;
 	char **figure2;
