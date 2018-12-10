@@ -10,8 +10,8 @@ struct DATA {
 
 void output(struct DATA *d)
 {
-  printf("(%d,%d,%d)\n", (*d).a1, (*d).a2, (*d).a3);
-	/*	printf("(%d,%d,%d)\n", d->a1, d->a2, d->a3); */
+  // printf("(%d,%d,%d)\n", (*d).a1, (*d).a2, (*d).a3);
+	printf("(%d,%d,%d)\n", d->a1, d->a2, d->a3); 
 }
 
 int main(void)
