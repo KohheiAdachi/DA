@@ -11,7 +11,7 @@ struct DATA {
 struct DATA eval( int p[] )
 {
 	struct DATA result;
-	int max=0,min=100,sum=0;
+	int max=p[0],min=p[0],sum=0;
 	double avg;
 	int i=0;
 	while(p[i] != -1){
@@ -42,7 +42,6 @@ int main( void )
 	int score[] = { 77, 85, 56, 71, 48, 63, 94, 37, 52, 79, -1 };
 
 	seiseki = eval( score );
-
 	output( &seiseki );
 	return 0;
 }

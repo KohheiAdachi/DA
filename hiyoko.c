@@ -2,8 +2,11 @@
 
 int main(int argc, char const *argv[])
 {
-    int i=0;
+    int i=0,j=0;
+    printf("%d",i);
+    printf("%d",j);
+    ++j;
     i++;
     printf("%d",i);
-    return 0;
+    printf("%d",j);
 }
