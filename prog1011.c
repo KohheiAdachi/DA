@@ -46,7 +46,6 @@ void find_zip_by_key(char *key)
             printf("%d %s\n",zip_data[i].code,zip_data[i].name);
         }
     }
-    printf("%s",zip_data[0].name);
 }
 
 int main(void)
