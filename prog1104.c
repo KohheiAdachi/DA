@@ -16,10 +16,18 @@ void init(void)
 
 void add(int n)
 {
-
-
-
-
+  if(top == NULL){
+    top = (struct LIST *)malloc(sizeof(struct LIST));
+    top->data = n;
+    top->next = NULL;
+  }
+  else{
+    struct LIST *p;
+    p = (struct LIST *)malloc(sizeof(struct LIST));
+    p->data = n;
+    p->next = top;
+    top = p;
+  }
 }
 
 void print(void)
@@ -34,15 +42,14 @@ void print(void)
 
 struct LIST *search(int n)
 {
-
-
-
-	
-
-
-
-
-	
+  struct LIST *p = top;
+  while(p != NULL){
+    if(p->data == n){
+      return p;
+    }
+    p = p->next;
+  }
+  return NULL;
 }
 
 int main(void)
