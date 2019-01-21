@@ -47,17 +47,35 @@ void add_tree(int data)
 
 struct TREE *search_tree(int n)
 {
-	/* 省略 */
+	struct TREE *p = root;
+  
+  while(p != NULL) {
+    if(n == p->data){
+      return p;
+    } else if( n < p->data ){
+      p = p->left;
+    } else{
+      p = p->right;
+    }
+  }
+   return NULL;	
 }
 
 void display_tree(struct TREE *p)
 {
-
-
-
-
-
-	
+  if(p != NULL){
+    display_tree(p->left);
+    printf("%d\n",p->data);
+    display_tree(p->right);
+  }
+  // if(p == NULL){
+  //   return;
+  // }
+  // else{
+  //   display_tree(p->left);
+  //   printf("%d\n",p->data);
+  //   display_tree(p->right);
+  // }
 }
 
 int main(void)
@@ -69,7 +87,6 @@ int main(void)
   add_tree(4);
   add_tree(5);
   add_tree(8);
-
   display_tree(root);
 
   return 0;
