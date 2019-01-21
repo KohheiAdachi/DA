@@ -42,17 +42,18 @@ void add_tree(int data)
 
 struct TREE *search_tree(int n)
 {
-
-
-
-
-
-
-
-
-
-
-	
+  struct TREE *p = root;
+  
+  while(p != NULL) {
+    if(n == p->data){
+      return p;
+    } else if( n < p->data ){
+      p = p->left;
+    } else{
+      p = p->right;
+    }
+  }
+   return NULL;	
 }
 
 int main(void)
@@ -66,7 +67,7 @@ int main(void)
   add_tree(5);
   add_tree(8);
 
-  printf("n=\n");
+  printf("n=");
   scanf("%d", &n);
 
   struct TREE *p = search_tree(n);
