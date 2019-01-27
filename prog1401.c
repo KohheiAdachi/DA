@@ -47,14 +47,15 @@ void add_tree(int data)
 
 int search_max(struct TREE *tree)
 {
-
-
-
-
-
-
-
-
+  if (tree->right != NULL){
+    return search_max(tree->right);
+  }
+  else{
+    return tree->data;
+  }
+  if(tree == NULL){
+    return 0;
+  }
 }
 
 void delete_node(int n, struct TREE **tree)
@@ -115,6 +116,22 @@ void display_tree(struct TREE *node)
     depth--;
   }
 }
+void show_tree(struct TREE *p)
+{
+  if(p != NULL){
+    show_tree(p->left);
+    printf("%d\n",p->data);
+    show_tree(p->right);
+  }
+  // if(p == NULL){
+  //   return;
+  // }
+  // else{
+  //   display_tree(p->left);
+  //   printf("%d\n",p->data);
+  //   display_tree(p->right);
+  // }
+}
 
 int main(void)
 {
@@ -136,6 +153,6 @@ int main(void)
 
   print_tree(root);
   printf("\n");
-
+  show_tree(root);
   return 0;
 }

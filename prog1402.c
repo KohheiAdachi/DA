@@ -93,17 +93,20 @@ void add_tree(int data)
 
 void pre_order(struct TREE *p)
 {
-
-
-
-
-
-
+  if(p != NULL){
+    printf("%d ",p->data);
+    pre_order(p->left);
+    pre_order(p->right);
+  }
 }
 
 void in_order(struct TREE *p)
 {
-
+  if(p != NULL){
+    in_order(p->left);
+    printf("%d ",p->data);
+    in_order(p->right);
+  }
 
 
 
@@ -112,7 +115,11 @@ void in_order(struct TREE *p)
 
 void post_order(struct TREE *p)
 {
-
+  if(p != NULL){
+    post_order(p->left);
+    post_order(p->right);
+    printf("%d ",p->data);
+  }
 
 
 
@@ -122,14 +129,16 @@ void post_order(struct TREE *p)
 
 void breadth_first(struct TREE *p)
 {
-
-
-
-
-
-
-
-
+    init();
+    enqueue(p);
+    while(is_empty()==0){
+      struct TREE *node = dequeue();
+      if (node != NULL){
+        printf("%d ",node->data);
+        enqueue(node->left);
+        enqueue(node->right);
+      }
+    }
 
 }
 
