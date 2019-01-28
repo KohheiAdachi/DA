@@ -123,14 +123,6 @@ void show_tree(struct TREE *p)
     printf("%d\n",p->data);
     show_tree(p->right);
   }
-  // if(p == NULL){
-  //   return;
-  // }
-  // else{
-  //   display_tree(p->left);
-  //   printf("%d\n",p->data);
-  //   display_tree(p->right);
-  // }
 }
 
 int main(void)
