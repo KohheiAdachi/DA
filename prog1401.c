@@ -146,6 +146,6 @@ int main(void)
 
   print_tree(root);
   printf("\n");
-  show_tree(root);
+  
   return 0;
 }
