@@ -129,7 +129,7 @@ void post_order(struct TREE *p)
 
 void breadth_first(struct TREE *p)
 {
-    init();
+  
     enqueue(p);
     while(is_empty()==0){
       struct TREE *node = dequeue();
