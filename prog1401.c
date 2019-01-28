@@ -125,14 +125,6 @@ void display_tree(struct TREE *node)
     depth--;
   }
 }
-void show_tree(struct TREE *p)
-{
-  if(p != NULL){
-    show_tree(p->left);
-    printf("%d\n",p->data);
-    show_tree(p->right);
-  }
-}
 
 int main(void)
 {
