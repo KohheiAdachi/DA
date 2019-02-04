@@ -47,24 +47,24 @@ void add_tree(int data)
 
 int search_max(struct TREE *tree)
 {
-  // if(tree == NULL){
-  //   return 0;
-  // }
-  // if (tree->right != NULL){
-  //   return search_max(tree->right);
-  // }
-  // else{
-  //   return tree->data;
-  // }
-  struct TREE *p = tree;
-  while(p != NULL){
-    if(p->right == NULL){
-      return p->data;
-    } else{
-      p = p->right;
-    }
+  if(tree == NULL){
+    return 0;
   }
-  return 0;
+  if (tree->right != NULL){
+    return search_max(tree->right);
+  }
+  else{
+    return tree->data;
+  }
+  // struct TREE *p = tree;
+  // while(p != NULL){
+  //   if(p->right == NULL){
+  //     return p->data;
+  //   } else{
+  //     p = p->right;
+  //   }
+  // }
+  // return 0;
 }
 
 void delete_node(int n, struct TREE **tree)
