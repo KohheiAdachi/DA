@@ -181,12 +181,13 @@ int tet_line_check(int y)
 {
   /* WRITE CODE */
   int i;
-  for(i=0;i<XSIZE;i++){
+  for(i=0;i<=XSIZE;i++){
     if(map[i][y] == 0){
       return 0;
     }
   }
   return 1;
+  
 }
 
 /* delete line y and down all blocks avove y */
@@ -292,7 +293,7 @@ void tet_main(void)
       oldsec = tim->tm_sec;
       if( tet_check(block)==1 ){
 	/* collide with bottom(floor) */
-	return;
+	    return;
       }
     }
 
