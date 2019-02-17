@@ -22,8 +22,9 @@ void bubble_sort(int data[], int n)
                 data[j-1] = data[j];
                 data[j] = t;
             }
+            print_array( data, n );
         }
-        print_array( data, n );
+        // print_array( data, n );
     }
 }
 
