@@ -23,10 +23,12 @@ void insersion_sort(int data[], int n)
             while( j>0 && data[j-1] > t ){
             data[j] = data[j-1];
             j--;
+            print_array( data, n );
             }
         data[j] = t;
-        }
         print_array( data, n );
+        }
+        
     }
 }
 
