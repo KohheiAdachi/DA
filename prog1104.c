@@ -46,8 +46,9 @@ struct LIST *search(int n)
   while(p != NULL){
     if(p->data == n){
       return p;
-    }
+    }else{
     p = p->next;
+    }
   }
   return NULL;
 }
