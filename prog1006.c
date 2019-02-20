@@ -10,7 +10,7 @@ int main(void)
     p1 = (int *)malloc(sizeof(int));
 
     *p1 = 5;
-
+    printf("%p\n",p1);
     printf("%d\n",*p1);
 
     free(p1);

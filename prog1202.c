@@ -67,22 +67,25 @@ void delete(struct LIST *delete)
 
 void push(int n)
 {
-  struct LIST *p;
-  p = (struct LIST *)malloc(sizeof(struct LIST));
-  p->data = n;
-  p->next = top;
-  top = p;
+  // struct LIST *p;
+  // p = (struct LIST *)malloc(sizeof(struct LIST));
+  // p->data = n;
+  // p->next = top;
+  // top = p;
+  add(n);
   count++;
 }
 
 int pop(void)
 {
-  struct LIST *find;
-  find = search(top->data);
-  int n = top->data;
-  delete(find);
+  // struct LIST *find;
+  // find = search(top->data);
+  // int n = top->data;
+  // delete(find);
+  int data = top->data;
+  delete(top);
   count--;
-  return n;
+  return data;
 }
 
 int size(void)
